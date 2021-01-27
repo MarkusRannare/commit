@@ -59,6 +59,7 @@ jobs:
         email: me@example.com
         name: GitHub Actions Autocommitter
         branch: master
+        folder: source-directory
         files: file1 file2 directory directory2/file3
         repository: https://github.com/Example/SomeOtherRepository
         token: ${{ secrets.MY_SECRET_TOKEN }}

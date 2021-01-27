@@ -10,6 +10,8 @@ if [ "$INPUT_FORCE" != "0" ]; then
   FORCE='--force'
 fi
 
+cd $INPUT_FOLDER
+
 echo "machine github.com" > "$HOME/.netrc"
 echo "  login $GITHUB_ACTOR" >> "$HOME/.netrc"
 echo "  password $INPUT_TOKEN" >> "$HOME/.netrc"
@@ -21,6 +23,7 @@ echo "  password $INPUT_TOKEN" >> "$HOME/.netrc"
 git config user.email "$INPUT_EMAIL"
 git config user.name "$INPUT_NAME"
 # shellcheck disable=SC2086
+
 git add $INPUT_FILES -v
 git commit -m "$INPUT_MESSAGE"
 

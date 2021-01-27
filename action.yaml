@@ -20,6 +20,10 @@ inputs:
     description: The branch to push the changes back to, defaults to the current branch
     required: true
     default: ${{ github.ref }}
+  folder:
+    description: The local folder the repository resides in, defaults to .
+    required: false
+    default: .
   files:
     description: The files to add separated by space, defaults to every file
     required: true
